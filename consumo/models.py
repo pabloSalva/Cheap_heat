@@ -50,6 +50,7 @@ class Artefacto(models.Model):
     nombre_artefacto=models.CharField(max_length=20)
     consumo=models.IntegerField(default=0)
     eficiencia=models.CharField(max_length=4)
+    categoria=models.CharField(max_length=20,default="Aires")
     descripcion=models.CharField(max_length=20)
     marca=models.CharField(max_length=20,default="S/N")
     modelo=models.CharField(max_length=20,default="S/N")
