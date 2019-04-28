@@ -1,11 +1,78 @@
  
- {% extends 'consumo/index.html' %}
+ {% extends 'consumo/ppal.html' %}
  {% load static %}
 
  {% block content %}
-    <button class = "traer" id="Aires">Aires Acondicionados</button>
-    <button class = "traer" id="LineaBlanca">Lavado</button>
-    <button class = "traer" id="Calefactores">calefactores</button>
+<!-- Extra large modal -->
+
+
+<div>
+
+<button type="button" class="btn btn-primary traer" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Aires" id="Aires">Aires</button>
+</div>
+<div>
+<button type="button" class="btn btn-primary traer" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="LineaBlanca" id="LineaBlanca">Linea Blanca</button>
+<button type="button" class="btn btn-primary traer" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Calefactores" id="Calefactores">Calefactores</button>
+
+</div>
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+        <!--tabla modal -->
+          <div class="row" >
+            <div class="col-sm-12" >
+              <table class="table table-hover table-condensed table-bordered">
+                <thead>
+                  <tr>
+                    <td>seleccion</td>
+                    <td>Artefacto</td>
+                    <td>marca</td>
+                    <td>modelo</td>
+                    <td>consumo</td>
+                  </tr>
+                </thead>
+                <tbody id="contenidomodal">
+                
+                </tbody>
+              </table> 
+              <button type="button" class="btn btn-primary" id="Agregar"> Agregar</button> 
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--tabla generada con artafactos seleccionados en el modal-->
+
+<div class="row" >
+        <div class="col-sm-12" >
+          <table class="table table-hover table-condensed table-bordered">
+            <thead>
+            <tr>
+              <td>Artefacto</td>
+              <td>marca</td>
+              <td>modelo</td>
+              <td>consumo</td>
+              <td>cantidad</td>
+              <td>horas</td>
+              <td>dias</td>
+              
+              <td>eliminar</td>
+            </tr>
+            </thead>
+            <tbody id="contenido">
+            
+            </tbody>
+            
+          </table>  
+          <button type="button" class="btn btn-primary" id="calcular"> Calcular</button>
+          
+      
+        </div>
+      </div>
 	  
     
  {% endblock content %}
