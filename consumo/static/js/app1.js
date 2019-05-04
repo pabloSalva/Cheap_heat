@@ -102,7 +102,42 @@
                                 <option>5</option>
                                 <option>6</option>
                             </select></td>
-                            <td></td>
+                            <td>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                               
+
+                            </select>
+                            </td>
                    
                             <td>
                                 <button type="button" class="btn btn-outline-danger eliminar"  id=${select.id} >Eliminar</button>
@@ -176,26 +211,18 @@ $('#calcular').on('click',function(){
             var consumo=parseInt(columnas[3].textContent);
 
             var horas = parseInt(columnas[5].textContent);
-    
-     
-    
-            
-    
-            
-    
-     
-    
-            total+=cantidad*consumo*horas;
+
+            var dias = parseInt(columnas[6].textContent);
+
+
+            total+=cantidad*consumo*horas*dias;
     
         });
-        alert(total*1.4)
-    
-     
-    
-        // mostramos la suma total
-    
-        // var filas=document.querySelectorAll("#tabla tfoot tr td");
-    
-        // filas[1].textContent=total.toFixed(2);
+        var res = ((total*1.4)/1000) 
+        var resultado = document.getElementById("precio")
+        // resultado.innerHTML = '';
+        resultado.innerHTML = "precio de consumo electrico: $"+ res
+        console.log(res)
+        
     
 })

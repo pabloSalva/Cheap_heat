@@ -64,21 +64,23 @@
       </div>
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
-        <h1 class="font-weight-light">Business Name or Tagline</h1>
-        <a href=" {% url 'calculo' %}" >ir pagina de calculo electrico </a>
-        <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-        <a class="btn btn-primary" href="#">Call to Action!</a>
+        <h1 class="font-weight-light">calculador de consumo</h1>
+        
+        <p>parrafo</p>
+        <a class="btn btn-primary" href="{% url 'calculo' %}">calculo electrico</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
     <!-- /.row -->
 
     <!-- Call to Action Well -->
+    {% block precio%}
     <div class="card text-white bg-secondary my-5 py-4 text-center">
       <div class="card-body">
-        <p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p>
+        <p class="text-white m-0"></p>
       </div>
     </div>
+    {% endblock %}
 
     <!-- Content Row -->
     <div class="row">
