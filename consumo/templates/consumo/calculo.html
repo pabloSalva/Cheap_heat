@@ -2,6 +2,11 @@
  {% extends 'consumo/ppal.html' %}
  {% load static %}
 
+ {% block title %}
+ <title>Calculo electrico</title>
+ {% endblock  %}
+ 
+
  {% block content %}
 <!-- Extra large modal -->
 
@@ -35,7 +40,8 @@
                 
                 </tbody>
               </table> 
-              <button type="button" class="btn btn-primary" id="Agregar"> Agregar</button> 
+              <button type="button" class="btn btn-primary" id="Agregar" > Agregar</button> 
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
     </div>
@@ -49,7 +55,7 @@
 
 <div class="row" >
         <div class="col-sm-12" >
-          <table class="table table-hover table-condensed table-bordered">
+          <table class="table table-hover table-condensed table-bordered" id="tabla">
             <thead>
             <tr>
               <td>Artefacto</td>
@@ -76,6 +82,7 @@
 	  
     
  {% endblock content %}
+ 
 
  {% block extraJS %}
     <script  src="{% static 'js/app1.js' %}"></script>
