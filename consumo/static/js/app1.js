@@ -218,7 +218,7 @@ $('#calcular').on('click',function(){
             total+=cantidad*consumo*horas*dias;
     
         });
-        var res = ((total*1.4)/1000) 
+        var res = ((total*1.9)/1000) 
         var resultado = document.getElementById("precio")
         // resultado.innerHTML = '';
         resultado.innerHTML = "precio de consumo electrico: $"+ res
