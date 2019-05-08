@@ -22,4 +22,11 @@ urlpatterns = [
     path('api/artefactos/' ,include('consumo.urls') ),
     path('index/',views.index),
     path('calculo/',views.calculador,name="calculo"),
+    path('sugerencias/', views.sugerenciaGas, name="sugerenciasGas"),
+    path('general/',views.general,name="general"),
+    path('cocina/',views.cocina,name="cocina"),
+    path('agua/',views.agua,name="agua"),
+    path('calefaccion/',views.calefaccion,name="calefaccion"),
+    path('renovable/', views.renovable, name="renovable"),
+
 ]

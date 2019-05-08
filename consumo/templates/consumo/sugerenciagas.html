@@ -1,0 +1,147 @@
+{% extends 'consumo/ppal.html' %}
+ {% load static %}
+
+ {% block title %}
+ <title>Cuidar el gas</title>
+ {% endblock  %}
+
+ {% block content %}
+
+ <blockquote class="blockquote text-center">
+ <h1>
+  <p class="mb-0">Sugerencias para el cuidado del gas</p>
+  </h1>
+  </blockquote>
+{% comment %} redireccionamiento a links especificos de Sugerencias
+
+
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-pills card-header-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="{% url 'general' %}">General</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'cocina' %}">Cocina</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="{% url 'agua' %}">Agua</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="{% url 'calefaccion' %}" >Calefaccion</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+ {% endcomment %}
+
+ 
+    
+<div class="row">
+    
+
+ <div class="col-md-4 mb-5">
+  <div class="card">
+  <div class="card-header">
+   <a class="nav-link active" href="{% url 'general' %}">General</a>
+  </div>
+  <div class="card-body">
+    <p class="text-justify">Reducir las vías de escape del calor. Mejorar el aislamiento térmico permite un óptimo rendimiento y se puede lograr un importante ahorro de energía en calefacción. Es importante controlar que los burletes y cerramientos estén en perfectas condiciones. Asimismo, se recomienda mantener las puertas cerradas para que el aire caliente no se escape por pasillos o por habitaciones vacías.
+</p>
+    
+  </div>
+</div>
+</div>
+
+
+
+<div class="col-md-4 mb-5">
+  <div class="card">
+  <div class="card-header">
+   <a class="nav-link" href="{% url 'cocina' %}">Cocina</a>
+  </div>
+  <div class="card-body">
+
+  <p class="text-justify">Bajar la llama de la hornalla al mínimo cuando la comida empieza a hervir. No hacerlo significa derrochar gas.Además, no agregar sal antes del hervor puede colaborar al ahorro ya que esta aumenta el punto de ebullición.
+</p>
+
+    
+  </div>
+</div>
+</div>
+
+
+
+</div>
+
+<div class="row">
+<div class="col-md-4 mb-5">
+  <div class="card">
+  <div class="card-header">
+   <a class="nav-link" href="{% url 'agua' %}">Agua</a>
+  </div>
+  <div class="card-body">
+  <p class="text-justify">Regular el calefón o el termotanque a la temperatura ideal, para que no haya que agregarle agua fría. Con esa simple medida evitas un derroche de energía y de agua, además de cuidar tu bolsillo.</p>
+
+  
+  </div>
+</div>
+</div>
+
+
+
+
+
+<div class="col-md-4 mb-5">
+  <div class="card">
+  <div class="card-header">
+   <a class="nav-link" href="{% url 'calefaccion' %}" >Calefaccion</a>
+  </div>
+  <div class="card-body">
+<p class="text-justify">No utilizar el calefactor durante las 24 horas. Este artefacto tiene un alto nivel de consumo, y promedia el medio metro cúbico por hora que, en un bimestre, llega a acumular 600 metros cúbicos. Por esta razón es recomendable apagar el artefacto o reducirlo al mínimo durante la noche y en horas del mediodía cuando la temperatura externa es más agradable.
+</p>
+    
+  </div>
+</div>
+</div>
+
+
+
+<div class="col-md-5 mb-8">
+<div class="card">
+    <img src="../../static/img/solar.jpg" class="card-img-top" >
+    <div class="card-body">
+      <h5 class="card-title">
+      <a class="nav-link" href="{% url 'renovable' %}">Renovables</a>
+      </h5>
+      <p class="card-text">Aprender más sobre alternativas renovables</p>
+      
+    </div>
+  </div>
+</div>  
+
+
+
+
+ 
+  
+    
+  
+  
+  {% comment %} <p class="text-justify"></p>
+  <p class="text-justify"></p> {% endcomment %}
+ 
+  
+
+
+ 
+</div>
+ 
+
+
+ {% endblock %}

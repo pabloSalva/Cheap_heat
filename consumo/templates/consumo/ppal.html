@@ -25,6 +25,8 @@
 
 <body>
 
+  {% block navegacion %}
+  
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -52,6 +54,7 @@
       </div>
     </div>
   </nav>
+  {% endblock %}
 
   <!-- Page Content -->
   {% block content %}
@@ -68,6 +71,7 @@
         
         <p>parrafo</p>
         <a class="btn btn-primary" href="{% url 'calculo' %}">calculo electrico</a>
+        <a class="btn btn-primary" href="{% url 'sugerenciasGas' %}">Sugerencias de ahorro de gas</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
