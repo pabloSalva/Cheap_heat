@@ -8,6 +8,9 @@ def index(request):
 def calculador(request):
     return render(request, "consumo/calculo.html")
 
+def calculadorGas(request):
+    return render(request, "consumo/calculoGas.html")    
+
 def sugerenciaGas(request):
     return render(request, "consumo/sugerenciagas.html")
 

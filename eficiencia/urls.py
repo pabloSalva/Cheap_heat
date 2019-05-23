@@ -19,9 +19,23 @@ from consumo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    
+    #endPoint
+
     path('api/artefactos/' ,include('consumo.urls') ),
+
+    #pagina Principal
     path('index/',views.index),
+
+    #calculos
+    
     path('calculo/',views.calculador,name="calculo"),
+    path('calculoGas',views.calculadorGas, name="calculoGas"),
+    
+    
+    #urls de sugerencias
+
     path('sugerencias/', views.sugerenciaGas, name="sugerenciasGas"),
     path('general/',views.general,name="general"),
     path('cocina/',views.cocina,name="cocina"),

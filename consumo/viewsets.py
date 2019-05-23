@@ -10,4 +10,13 @@ class ArtefactoViewSet(viewsets.ModelViewSet):
     serializer_class = ArtefactoSerializer
 class EntidadViewSet(viewsets.ModelViewSet):
     queryset= Entidad.objects.all()
-    serializer_class = EntidadSerializer    
+    serializer_class = EntidadSerializer 
+
+class ArtefactoElectricoViewSet(viewsets.ModelViewSet):
+    queryset=Artefacto.objects.filter(tipo__contains='electrico')
+    serializer_class = ArtefactoSerializer
+
+class ArtefactoGasViewSet(viewsets.ModelViewSet):
+    queryset = Artefacto.objects.filter(tipo__contains='gas')
+    serializer_class = ArtefactoSerializer
+        
