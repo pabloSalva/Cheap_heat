@@ -12,6 +12,9 @@ body {
   margin: 0;
   padding-top: 56px;
   margin-bottom: 200px;
+
+
+
 }
 footer{
   position:absolute;
@@ -20,4 +23,36 @@ footer{
    height:30px;
    width:100%;
    
+}
+.botoncalefactorgas{
+  background-image:url("../img/icono calefactor.png");
+  height:108px;
+  width:156px;
+  
+  color: rgb(42, 0, 139)
+
+}
+.botoncocinagas{
+  background-image:url("../img/iconoCocina.png");
+  height:108px;
+  width:156px;
+  
+  color: rgb(42, 0, 139)
+
+}
+.botoncalefon{
+  background-image:url("../img/iconoCalefon.png");
+  height:108px;
+  width:156px;
+  
+  color: rgb(42, 0, 139)
+
+}
+.botontermotanque{
+  background-image:url("../img/iconoTermotanque.png");
+  height:108px;
+  width:156px;
+  
+  color: rgb(42, 0, 139)
+
 }
