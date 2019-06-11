@@ -56,3 +56,12 @@ footer{
   color: rgb(42, 0, 139)
 
 }
+
+.botoncaldera{
+  background-image:url("../img/iconoCaldera.jpg");
+  height:108px;
+  width:156px;
+  
+  color: rgb(42, 0, 139)
+
+}
