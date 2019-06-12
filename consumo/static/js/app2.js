@@ -198,10 +198,12 @@ $('#calcular').on('click',function(){
 
             total+=cantidad.value*metrosCubicos*horas.value*dias.value;
             
-        });
-        console.log('total: '+total)
-        //9.027509 cargo variable en tarifa R1 Camuzzi La Plata
-        var res = (total*9.027509) 
+        });//fin forEach
+        console.log('total: '+total)//total de consumo de gas en m^3
+        //9.027509 cargo variable en tarifa R1 Camuzzi La Plata....falta agregar funcion que dinamice
+        var res = (total*9.027509)
+        
+        //falta funcion que dinamice el cargo fijo
         var cargoFijo= 193.77
         var precio = parseInt(res+cargoFijo)
         var resultado = document.getElementById("precio")
@@ -211,5 +213,13 @@ $('#calcular').on('click',function(){
         
         console.log(res)
         
+
+        
     
-})
+})//fin funcion calcular
+
+
+//funcion que es devuelta automaticamente cuando se hace el calculo del consumo de gas para mostrar los limites tarifarios y posibles recomendaciones
+function recomendacion(){
+
+}
