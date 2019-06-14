@@ -65,3 +65,22 @@ footer{
   
 
 }
+
+.botonaire{
+  background-image:url("../img/iconoAire.jpg");
+  height:108px;
+  width:156px;
+  
+  
+
+}
+
+
+.botonlineablanca{
+  background-image:url("../img/iconoLBlanca.png");
+  height:108px;
+  width:156px;
+  
+  
+
+}

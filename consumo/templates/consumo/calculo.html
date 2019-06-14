@@ -11,13 +11,15 @@
 <!-- Extra large modal -->
 
 
-<div>
-
-<button type="button" class="btn btn-primary traer" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Aires" id="Aires">Aires</button>
+<div class="container">
+  <h1 class="center">seleccione categoría de artefacto</h1>
 </div>
-<div>
-<button type="button" class="btn btn-primary traer" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="LineaBlanca" id="LineaBlanca">Linea Blanca</button>
-<button type="button" class="btn btn-primary traer" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Calefactores" id="Calefactores">Calefactores</button>
+<div class="container">
+<button type="button" class="btn btn-primary traer botonaire" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Aires" id="Aires"></button>
+
+
+<button type="button" class="btn btn-primary traer botonlineablanca" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="LineaBlanca" id="LineaBlanca"></button>
+<button type="button" class="btn btn-primary traer botoncalefactorgas" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Calefactores" id="Calefactores"></button>
 
 </div>
 <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
@@ -87,8 +89,9 @@
       </div>
     </div>
     {% endblock %}
-
+<!--
     {% block cartas %}
+      
 
     <div class="row">
       <div class="col-md-4 mb-5">
@@ -104,7 +107,8 @@
           </div>
         </div>
       </div>
-      <!-- /.col-md-4 -->
+      -->
+      <!-- /.col-md-4 
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
@@ -117,7 +121,8 @@
           </div>
         </div>
       </div>
-      <!-- /.col-md-4 -->
+      -->
+      <!-- /.col-md-4
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
@@ -129,9 +134,11 @@
           </div>
         </div>
       </div>
-      <!-- /.col-md-4 -->
+       -->
+      <!-- /.col-md-4
 
     </div>
+     -->
     <!-- /.row -->
     {% endblock  %}
     
