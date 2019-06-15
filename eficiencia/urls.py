@@ -26,7 +26,7 @@ urlpatterns = [
     path('api/artefactos/' ,include('consumo.urls') ),
 
     #pagina Principal
-    path('index/',views.index),
+    path('index/',views.index, name="indice"),
 
     #calculos
     

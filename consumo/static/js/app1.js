@@ -86,7 +86,7 @@
                             <td>${select.modelo}</td>
                             <td>${select.consumo}</td>
                             <td>
-                            <select>
+                            <select id="cantidad">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -94,7 +94,7 @@
                             <option>5</option>
                             <option>6</option>
                             </select></td>
-                            <td><select>
+                            <td><select id="horas">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -103,7 +103,7 @@
                                 <option>6</option>
                             </select></td>
                             <td>
-                            <select>
+                            <select id="dias">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -205,17 +205,25 @@ $('#calcular').on('click',function(){
             var columnas=e.querySelectorAll("td");
          
             // obtenemos los valores de la cantidad y importe
+            var cantidad=document.getElementById('cantidad');
+            console.log(cantidad.value)
     
-            var cantidad=parseInt(columnas[4].textContent);
+            
     
             var consumo=parseInt(columnas[3].textContent);
+            console.log(consumo);
+            
 
-            var horas = parseInt(columnas[5].textContent);
+            var horas = document.getElementById('horas');
+            console.log(horas.value);
 
-            var dias = parseInt(columnas[6].textContent);
+            var dias = document.getElementById('dias');
+            console.log(dias.value);
 
 
-            total+=cantidad*consumo*horas*dias;
+            total += cantidad.value*consumo*horas.value*dias.value;
+            console.log(total);
+            
     
         });
         var res = ((total*1.9)/1000) 
