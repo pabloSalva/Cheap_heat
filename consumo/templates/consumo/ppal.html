@@ -63,7 +63,7 @@
     <!-- Heading Row -->
     <div class="row align-items-center my-5">
       <div class="col-lg-7">
-        <img class="img-fluid rounded mb-4 mb-lg-0" src="http://placehold.it/900x400" alt="">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'img/eficienciaA++.jpg' %}" alt="">
       </div>
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
@@ -71,7 +71,7 @@
         
         <p>parrafo</p>
         <a class="btn btn-primary" href="{% url 'calculo' %}">Calculo Electrico</a>
-        <a class="btn btn-primary" href="{% url 'calculoGas' %}">Calculo Gas</a>
+        <a class="btn btn-primary gas" href="{% url 'calculoGas' %}">Calculo Gas</a>
         <a class="btn btn-primary" href="{% url 'sugerenciasGas' %}">Sugerencias de ahorro de gas</a>
       </div>
       <!-- /.col-md-4 -->
@@ -94,10 +94,12 @@
   <!-- /.container -->
   
   {% block footer%}
-  <!-- Footer <div class="container">  </div>-->
-  <footer class="py-5 crema">
+  <!-- Footer <div class="container">  </div> <img src="{% static 'img/gidas.png'%}" style="position: absolute; top: 0; right: 0;" /> -->
+  <footer class="py-5 ">
     
       <p class="m-0 text-center text-black">GIDAS &copy; UTN-FRLP</p>
+      
+     
   
     <!-- /.container -->
   </footer>

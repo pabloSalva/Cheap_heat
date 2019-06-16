@@ -194,7 +194,7 @@ $('#calcular').on('click',function(){
 
         var filas=document.querySelectorAll("#tabla tbody tr");
         var total=0;
-
+        console.log("cantidad de filas: " + filas)
         // recorremos cada una de las filas
     
         filas.forEach(function(e) {
