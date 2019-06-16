@@ -23,7 +23,8 @@ footer{
    bottom:0px;
    height:30px;
    width:100%;
-  text-decoration-color: black
+  text-decoration-color: black;
+  background: linear-gradient(90deg, whitesmoke 10%, rgb(173, 144, 144) 90%);
    
    
 }
@@ -84,6 +85,14 @@ footer{
 
 .botonlineablanca{
   background-image:url("../img/iconoLBlanca.png");
+  height:108px;
+  width:156px;
+  
+  
+
+}
+.gidas{
+  background-image:url("../img/gidas.png");
   height:108px;
   width:156px;
   

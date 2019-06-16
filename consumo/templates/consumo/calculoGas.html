@@ -9,7 +9,7 @@
  {% block content %}
 
 
-
+<div class="container">
 
 <div class="container my-5"> 
 <div class="row">
@@ -56,15 +56,15 @@
 
 
 
-<!--tabla generada con artafactos seleccionados en el modal-->
+<!--tabla generada con artafactos seleccionados en el modal table-condensed table-hover     -->
 <div class="container my-5" >
 <div class="row" >
     <div class="col-md-7 col-center">
         
       
-        <div class="col-sm-1" >
-          <table class="table table-hover table-condensed table-bordered" id="tabla">
-            <thead>
+        <div class="col-sm-1">
+          <table class="table  table-striped table-dark table-bordered " id="tabla">
+            <thead class="thead-dark">
             <tr>
               <td>Artefacto</td>
               <td>marca</td>
@@ -82,21 +82,27 @@
             </tbody>
             
           </table>  
-          <button type="button" class="btn btn-primary" id="calcular"> Calcular</button>
+          
           
       
         </div>
     </div>
       </div>
     </div>
-	  {% block precio%}
-    <div class="card text-black my-5 py-4 text-center crema">
+  </div> <!--fin container principalmy-5--> 
+
+  
+    {% block precio%}
+    <button type="button" class="btn btn-primary " id="calcular"> Calcular</button>
+    <div class="card text-black  py-4 text-center crema">
       <div class="card-body">
       <p class="text-black m-0" id="precio"></p>
         
       </div>
     </div>
     {% endblock %}
+         
+
 
     {% block cartas %}
 
