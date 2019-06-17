@@ -17,6 +17,10 @@ body {
 
 
 }
+p.color{
+  
+  font: icon
+}
 footer{
   position:absolute;
    left:0px;
@@ -102,6 +106,15 @@ footer{
 
 .gas{
   background-image:url("../img/llamaGas.png");
+  height:108px;
+  width:156px;
+  
+  
+
+}
+
+.electricidad{
+  background-image:url("../img/calculoElectrico.jpg");
   height:108px;
   width:156px;
   

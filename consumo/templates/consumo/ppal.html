@@ -58,24 +58,41 @@
 
   <!-- Page Content -->
   {% block content %}
-  <div class="container">
+  <div class="container align-items-center">
 
     <!-- Heading Row -->
     <div class="row align-items-center my-5">
       <div class="col-lg-7">
         <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'img/eficienciaA++.jpg' %}" alt="">
       </div>
-      <!-- /.col-lg-8 -->
-      <div class="col-lg-5">
-        <h1 class="font-weight-light">calculador de consumo</h1>
+      <!-- /.col-lg-8    -->
+      <div class="col-lg-5 align-items-center">
+        <h1 class="color">calculador de consumo</h1>
         
-        <p>parrafo</p>
-        <a class="btn btn-primary" href="{% url 'calculo' %}">Calculo Electrico</a>
-        <a class="btn btn-primary gas" href="{% url 'calculoGas' %}">Calculo Gas</a>
-        <a class="btn btn-primary" href="{% url 'sugerenciasGas' %}">Sugerencias de ahorro de gas</a>
+        
+            <div>
+              <h2>
+          <p class="color">calculo de consumo eléctrico</p>
+        </h2>  
+          <a class="btn btn-primary electricidad font-dark" href="{% url 'calculo' %}"></a>
+          </div>
+          <div>
+            <h2>
+          <p class="color  my-5">calculo de consumo de gas</p>
+        </h2>
+            <a class="btn btn-primary gas" href="{% url 'calculoGas' %}"></a>
+        
+
+        
+        
+        
       </div>
+      <a class="btn btn-primary" href="{% url 'sugerenciasGas' %}">Sugerencias de ahorro de gas</a>
       <!-- /.col-md-4 -->
     </div>
+    
+    
+    
     <!-- /.row -->
 
     <!-- Call to Action Well bg-secondary my-5 card py-4 -->
