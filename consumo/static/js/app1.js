@@ -194,7 +194,7 @@ $('#calcular').on('click',function(){
 
         var filas=document.querySelectorAll("#tabla tbody tr");
         var total=0;
-        console.log("cantidad de filas: " + filas)
+        console.log("cantidad de filas: " + filas.length)
         // recorremos cada una de las filas
     
         filas.forEach(function(e) {
@@ -204,7 +204,7 @@ $('#calcular').on('click',function(){
     
             var columnas=e.querySelectorAll("td");
          
-            // obtenemos los valores de la cantidad y importe
+            // obtenemos los valores de la cantidad e importe
             var cantidad=document.getElementById('cantidad');
             console.log(cantidad.value)
     
@@ -228,8 +228,15 @@ $('#calcular').on('click',function(){
         });
         var res = ((total*1.9)/1000) 
         var resultado = document.getElementById("precio")
+        var resultado1 = document.getElementById("consumo")
+        var resultado2 = document.getElementById("cantPaneles")
+        var resultado3 = document.getElementById("panel")
         // resultado.innerHTML = '';
         resultado.innerHTML = "precio de consumo electrico: $"+ res
+        resultado1.innerHTML="el total de KW consumidos en el periodo  es: "+total
+        resultado2.innerHTML=  "con X paneles solares se puede reducir el precio de consumo"
+        resultado3.innerHTML = `<img src="{% static 'img/iconoPanel.jpg'%}" alt="">` 
+        
         console.log(res)
         
     

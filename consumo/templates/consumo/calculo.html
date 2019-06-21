@@ -82,12 +82,30 @@
         </div>
       </div>
 	  {% block precio%}
-    <div class="card text-black crema my-5 py-4 text-center">
+    <div class="card text-black  py-1 text-center crema">
       <div class="card-body">
-      <p class="text-black m-0" id="precio"></p>
-        <img src="{% static 'img/iconoPanel.jpg'%}" alt="">
+      <p align="left" class="text-black m-0" id="precio"></p>
+        
       </div>
     </div>
+    
+
+
+<div class="card text-black  py-1 text-center crema">
+  <div class="card-body">
+  <p align="left" class="text-black m-0" id="consumo"></p>
+ 
+    
+  </div>
+</div>
+
+<div class="card text-black  py-1 text-center crema">
+  <div class="card-body" id="panel">
+  <p align="left" class="text-black m-0" id="cantPaneles"></p>
+  
+    
+  </div>
+</div>
     {% endblock %}
 <!--
     {% block cartas %}

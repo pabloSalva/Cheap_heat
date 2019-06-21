@@ -206,9 +206,13 @@ $('#calcular').on('click',function(){
         //falta funcion que dinamice el cargo fijo
         var cargoFijo= 193.77
         var precio = parseInt(res+cargoFijo)
-        var resultado = document.getElementById("precio")
+        var resultado = document.getElementById("precio")//muestra el consumo en pesos
+        var resultado2 = document.getElementById("consumo")//muestra el lugar de consumo en metros cubicos
+        var garrafas = document.getElementById("cantGarrafas")//cantidad de garrafas
         // resultado.innerHTML = '';
-        resultado.innerHTML = "el total consumido en pesos es: $"+ precio
+        resultado.innerHTML = "el total consumido en pesos es: $"+ precio 
+        resultado2.innerHTML = "el total de metros cubicos de gas es: "+ total + " m^3"
+        garrafas.innerHTML = "equvalente con X garrafas o tubos"
         
         
         console.log(res)
