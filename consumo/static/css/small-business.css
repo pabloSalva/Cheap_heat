@@ -17,6 +17,14 @@ body {
 
 
 }
+
+/* para variar el grado de opacidad de los elmentos*/
+.opacity{
+  background-color:rgb(173,144,144);
+  opacity:0.5; /* Opacidad 60% */
+  width:300px;
+  height:100px;
+}
 p.color{
   
   font: icon
@@ -32,6 +40,13 @@ footer{
    
    
 }
+
+.botonLupa{
+  background-image:url("../img/lupaGidas.png");
+  height:80px;
+  width:80px;
+}
+
 .crema{
   background-color: whitesmoke
 }

@@ -9,13 +9,15 @@
  {% block content %}
 
 
-<div class="container">
+
 
 <div class="container my-5"> 
+  <div class="card text-black  py-1  crema">
+  <div class="card-body">
 <div class="row">
     <div class="col-md-9 col-center">
     <button type="button" class="btn btn-primary traer botoncalefactorgas" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Calefactores" id="Calefactores"></button>
-    <button type="button" class="btn btn-primary traer botoncocinagas" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Cocinas" id="Cocinas"></button>
+
     <button type="button" class="btn btn-primary traer botoncalefon" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Calefones" id="Calefones"></button>
     <button type="button" class="btn btn-primary traer botontermotanque" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Termotanques" id="Termotanques"></button>
     <button type="button" class="btn btn-primary traer botoncaldera" data-toggle="modal" data-target=".bd-example-modal-xl" data-whatever="Calderas" id="Calderas"></button>
@@ -57,12 +59,9 @@
 
 
 <!--tabla generada con artafactos seleccionados en el modal table-condensed table-hover     -->
-<div class="container my-5" >
-<div class="row" >
-    <div class="col-md-7 col-center">
-        
-      
-        <div class="col-sm-1">
+
+<div class="row  my-5" >
+    <div class="col-sm-12" >
           <table class="table  table-striped table-dark table-bordered " id="tabla">
             <thead class="thead-dark">
             <tr>
@@ -87,9 +86,7 @@
       
         </div>
     </div>
-      </div>
-    </div>
-  </div> <!--fin container principalmy-5--> 
+    
 
   
     {% block precio%}
@@ -117,14 +114,12 @@
       </div>
     </div>
     {% endblock %}
-  </div>         
+        
 
 
-    {% block cartas %}
-
-
-    {% endblock  %}
-    
+  </div> 
+  </div>
+</div> <!--fin container principalmy-5-->  
  {% endblock content %}
  
 
