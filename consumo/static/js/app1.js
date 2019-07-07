@@ -1,29 +1,13 @@
-
-//funcion js que levanta el modal multiple boton
-
-// $('#exampleModal').on('show.bs.modal', function (event) {
-//     var button = $(event.relatedTarget) // Button that triggered the modal
-//     var recipient = button.data('whatever') 
-    
-//     var modal = $(this)
-//     modal.find('.modal-title').text('New message to ' + recipient)
-//     modal.find('.modal-body input').val(recipient)
-    
-//   })
- 
+//calculo del consumo electrico
 
 
-
-//funcion que trae artefactos de bd al modal
-//   $( document ).ready(function(){
-    
-      
+//funcion que trae artefactos de bd al modal  
     $(".traer").on('click',function(){
         var aid = $(this).attr("id")//devuelve el id de la clase traer (artefacto id aid) 
         var tabla = document.querySelector('#contenidomodal')
-        $.getJSON(" ../api/artefactos/artefactos",function(data){
+        $.getJSON(" ../api/artefactos/electricos",function(data){
             
-            var categoria = limpiar(aid,data)
+            var categoria = limpiar(aid,data)//llama a función limpiar para retornar los datos de categoría seleccionada
             console.log(categoria)
             
             
@@ -159,19 +143,15 @@
             
             
                 })//fin funcion agregado
-                
+                    
 
-                 
-
-    
-// })
 
 
 //funcion que retorna los datos de la categoría seleccionada
 
 function limpiar(idd,datos){ 
 
-    // console.log(id,datos)
+    
     var arr = []
      
     datos.forEach(element => {
@@ -198,44 +178,39 @@ $('#calcular').on('click',function(){
         // recorremos cada una de las filas
     
         filas.forEach(function(e) {
-    
-
             // obtenemos las columnas de cada fila
-    
             var columnas=e.querySelectorAll("td");
          
             // obtenemos los valores de la cantidad e importe
             var cantidad=document.getElementById('cantidad');
             console.log(cantidad.value)
-    
-            
-    
+            //prueba para obtener las cantidades reales de cantidad e items seleccionados
+            var cant = parseInt(columnas[4].innerText)
+            console.log("valor de cantidad seleccionada: "+ cant)
+
             var consumo=parseInt(columnas[3].textContent);
             console.log(consumo);
             
-
             var horas = document.getElementById('horas');
             console.log(horas.value);
 
             var dias = document.getElementById('dias');
             console.log(dias.value);
 
-
             total += cantidad.value*consumo*horas.value*dias.value;
             console.log(total);
-            
-    
-        });
+                
+        });//fin forEach
         var res = ((total*1.9)/1000) 
         var resultado = document.getElementById("precio")
         var resultado1 = document.getElementById("consumo")
-        var resultado2 = document.getElementById("cantPaneles")
+        //var resultado2 = document.getElementById("cantPaneles")
         var resultado3 = document.getElementById("panel")
         // resultado.innerHTML = '';
         resultado.innerHTML = "precio de consumo electrico: $"+ res
         resultado1.innerHTML="el total de KW consumidos en el periodo  es: "+total
-        resultado2.innerHTML=  "con X paneles solares se puede reducir el precio de consumo"
-        resultado3.innerHTML = `<img src="{% static 'img/iconoPanel.jpg'%}" alt="">` 
+        //resultado2.innerHTML=  "con X paneles solares se puede reducir el precio de consumo"
+        resultado3.innerHTML = `<img src="../static/img/iconoPanel.jpg" alt="">` 
         
         console.log(res)
         

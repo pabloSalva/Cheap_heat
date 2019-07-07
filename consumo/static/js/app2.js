@@ -6,7 +6,7 @@
         var tabla = document.querySelector('#contenidomodal')
         $.getJSON(" ../api/artefactos/gas",function(data){
             
-            var categoria = limpiar(aid,data)
+            var categoria = limpiar(aid,data)//llama a función limpiar para retornar los datos de categoría seleccionada
             console.log(categoria)
             tabla.innerHTML = ''
             //recorro el listado de elementos seleccionados en la funcion limpiar 
