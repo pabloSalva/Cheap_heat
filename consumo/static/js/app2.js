@@ -1,66 +1,56 @@
 //calculo del consumo de gas
 
           
-    $(".traer").on('click',function(){
-        var aid = $(this).attr("id")//devuelve el id de la clase traer (artefacto id aid) 
-        var tabla = document.querySelector('#contenidomodal')
-        $.getJSON(" ../api/artefactos/gas",function(data){
+$(".traer").on('click',function(){
+    var aid = $(this).attr("id")//devuelve el id de la clase traer (artefacto id aid) 
+    var tabla = document.querySelector('#contenidomodal')
+    $.getJSON(" ../api/artefactos/gas",function(data){
             
-            var categoria = limpiar(aid,data)//llama a función limpiar para retornar los datos de categoría seleccionada
-            console.log(categoria)
-            tabla.innerHTML = ''
-            //recorro el listado de elementos seleccionados en la funcion limpiar 
-            //los inserto en una tabla
-            categoria.forEach(elemento => {
-                tabla.innerHTML += `
+        var categoria = limpiar(aid,data)//llama a función limpiar para retornar los datos de categoría seleccionada
+        console.log(categoria)
+        tabla.innerHTML = ''
+        //recorro el listado de elementos seleccionados en la funcion limpiar 
+        //los inserto en una tabla
+        categoria.forEach(elemento => {
+            tabla.innerHTML += `
                 <tr> 
                 <div class="input-group">
                 <div class="input-group-prepend">
                 <div class="input-group-text">
-                
-                   
-                    <td><input type="checkbox" name="artefactos" value=${elemento.id}></td>
-                    
+                    <td><input type="checkbox" name="artefactos" value=${elemento.id}></td> 
                     <td>${elemento.nombre_artefacto}</td>
                     <td>${elemento.marca}</td>
                     <td>${elemento.modelo}</td>
-                    <td>${elemento.consumo}</td>
-                    
+                    <td>${elemento.consumo}</td>   
                 </div>
-            </div>
-                
-            </div>
-            </tr>
+                </div>    
+                </div>
+                </tr>
                  `
-            });//fin forEach
-
-
-        })
-        
+        });//fin forEach
     })
-            //funcion de agregar artefactos seleccionados por el usuario
-           $('#Agregar').on({click:function(){
-            $.getJSON(" ../api/artefactos/gas",function(data){
-           
-     
-                var checked = [];//arreglo que gusrdará los artefactos seleccionados por el ususario
-                
-                //Recorro todos los input checkbox con name = artefactos y que se encuentren "checked"
-                $("input[name='artefactos']:checked").each(function (){
-                    //Mediante la función push agrego al arreglo los values de los checkbox
-                    checked.push(($(this).attr("value")));
-                });
+ })
+
+
+//funcion de agregar artefactos seleccionados por el usuario
+$('#Agregar').on({click:function(){
+    $.getJSON(" ../api/artefactos/gas",function(data){
+        var checked = [];//arreglo que gusrdará los artefactos seleccionados por el ususario
+        //Recorro todos los input checkbox con name = artefactos y que se encuentren "checked"
+        $("input[name='artefactos']:checked").each(function (){
+        //Mediante la función push agrego al arreglo los values de los checkbox
+            checked.push(($(this).attr("value")));
+        });
                      
-                // $('input:checkbox[name=artefactos]').attr('checked',false);
+        // $('input:checkbox[name=artefactos]').attr('checked',false);
             
-                console.log(checked);
+        console.log(checked);
             
-                var contenido = document.getElementById('contenido');
-                checked.forEach(element => {
-                    
-                    data.forEach(select => {
-                        if (element == select.id) {
-                            contenido.innerHTML += `
+        var contenido = document.getElementById('contenido');
+        checked.forEach(element => {
+            data.forEach(select => {
+                if (element == select.id) {
+                    contenido.innerHTML += `
                             <tr>
                             <td>${select.nombre_artefacto}</td>
                             <td>${select.marca}</td>
@@ -121,7 +111,7 @@
                             </td>
                    
                             <td>
-                                <button type="button" class="btn btn-outline-danger eliminar"  id=${select.id} >Eliminar</button>
+                                <button type="button" class="btn btn-outline-danger borrar">Eliminar</button>
                             </td>
                              </tr>
                                     `
@@ -136,7 +126,7 @@
     }
             
             
-                })//fin funcion agregado
+})//fin funcion agregado
 
 //funcion que retorna los datos de la categoría seleccionada
 
@@ -146,13 +136,9 @@ function limpiar(idd,datos){
     var arr = []
      
     datos.forEach(element => {
-         
-
         if ( idd ==element.categoria ) {
-            arr.push(element)
-
-           
-       }
+            arr.push(element)    
+        }
         
     });
     return arr
@@ -227,3 +213,11 @@ $('#calcular').on('click',function(){
 function recomendacion(){
 
 }
+
+
+//funcion para eliminar un artefacto seleccionado de la tabla
+
+$(document).on('click', '.borrar', function (event) {
+    event.preventDefault();
+    $(this).closest('tr').remove();
+});
