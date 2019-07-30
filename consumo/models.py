@@ -39,7 +39,7 @@ class Tarifas(models.Model):
     codigo=models.CharField(max_length=20)
     desde=models.IntegerField(default=0)
     hasta=models.IntegerField(default=0)
-    cargofijo=models.IntegerField(default=0)
+    cargofijo=models.FloatField(default=0)
     tipo_tarifa=models.CharField(max_length=20,default="residencial")
 
     #def __str__(self):

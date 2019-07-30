@@ -4,7 +4,7 @@
 $(".traer").on('click',function(){
     var aid = $(this).attr("id")//devuelve el id de la clase traer (artefacto id aid) 
     var tabla = document.querySelector('#contenidomodal')
-    $.getJSON(" ../api/artefactos/gas",function(data){
+    $.getJSON(" ../api/gas",function(data){
             
         var categoria = limpiar(aid,data)//llama a función limpiar para retornar los datos de categoría seleccionada
         console.log(categoria)
@@ -34,7 +34,7 @@ $(".traer").on('click',function(){
 
 //funcion de agregar artefactos seleccionados por el usuario
 $('#Agregar').on({click:function(){
-    $.getJSON(" ../api/artefactos/gas",function(data){
+    $.getJSON(" ../api/gas",function(data){
         var checked = [];//arreglo que gusrdará los artefactos seleccionados por el ususario
         //Recorro todos los input checkbox con name = artefactos y que se encuentren "checked"
         $("input[name='artefactos']:checked").each(function (){

@@ -5,7 +5,7 @@
 $(".traer").on('click',function(){
     var aid = $(this).attr("id")//devuelve el id de la clase traer (artefacto id aid) 
     var tabla = document.querySelector('#contenidomodal')
-    $.getJSON(" ../api/artefactos/electricos",function(data){
+    $.getJSON(" ../api/electricos",function(data){
             
         var categoria = limpiar(aid,data)//llama a función limpiar para retornar los datos de categoría seleccionada
         console.log(categoria)
@@ -32,9 +32,9 @@ $(".traer").on('click',function(){
         });//fin forEach
     })
  })
-//funcion de agregar artefactos seleccionados por el usuario
+//funcion de agregar artefactos seleccionados por el usuario 
 $('#Agregar').on({click:function(){
-    $.getJSON(" ../api/artefactos/artefactos",function(data){
+    $.getJSON(" ../api/electricos",function(data){
         var checked = [];//arreglo que gusrdará los artefactos seleccionados por el ususario
         //Recorro todos los input checkbox con name = artefactos y que se encuentren "checked"
         $("input[name='artefactos']:checked").each(function (){
@@ -44,6 +44,8 @@ $('#Agregar').on({click:function(){
         // $('input:checkbox[name=artefactos]').attr('checked',false);
         console.log(checked);
         var contenido = document.getElementById('contenido');
+
+
         checked.forEach(element => {
                     
                     data.forEach(select => {
@@ -54,15 +56,17 @@ $('#Agregar').on({click:function(){
                             <td>${select.marca}</td>
                             <td>${select.modelo}</td>
                             <td>${select.consumo}</td>
-                            <td>
+                            
+                            <td id="seleccion">
                             <select id="cantidad">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
                             </select></td>
+
                             <td><select id="horas">
                                 <option>1</option>
                                 <option>2</option>
@@ -157,35 +161,42 @@ $('#calcular').on('click',function(){
     //sumar el total de consumo y multiplicar por el precio de kwh
         // obtenemos todas las filas del tbody
 
-        var filas=document.querySelectorAll("#tabla tbody tr");
+        var filas=document.querySelectorAll("#tabla #contenido tr");
         var total=0;
         console.log("cantidad de filas: " + filas.length)
         // recorremos cada una de las filas
-    
-        filas.forEach(function(e) {
-            // obtenemos las columnas de cada fila
-            var columnas=e.querySelectorAll("td");
-         
+        // obtenemos las columnas de cada fila
+        
+        //filas.forEach(function(e) {
+        for (let index = 0; index < filas.length; index++) {
+            
+            
+           
+            var columnas=$("#contenido tr:eq("+index+") td")
+            console.log("columnas: " + columnas[index].textContent);
+            
             // obtenemos los valores de la cantidad e importe
-            var cantidad=document.getElementById('cantidad');
-            console.log(cantidad.value)
+            //var cantidad=document.getElementById('cantidad');
+            //var cantidad = $('#cantidad').val()
+            //console.log("cantidad seleccionada: "+cantidad)
+         
             //prueba para obtener las cantidades reales de cantidad e items seleccionados
             var cant = parseInt(columnas[4].innerText)
             console.log("valor de cantidad seleccionada: "+ cant)
 
             var consumo=parseInt(columnas[3].textContent);
-            console.log(consumo);
+            console.log("consumo:" + consumo);
             
             var horas = document.getElementById('horas');
-            console.log(horas.value);
+            console.log("horas: " + horas.value);
 
             var dias = document.getElementById('dias');
-            console.log(dias.value);
-
-            total += cantidad.value*consumo*horas.value*dias.value;
-            console.log(total);
+            console.log("dias: " + dias.value);
+            total += cant*consumo*horas.value*dias.value
+            //total += cantidad.value*consumo*horas.value*dias.value;
+            console.log("total: " + total);
                 
-        });//fin forEach
+        };//fin forEach
         var res = ((total*1.9)/1000) 
         var resultado = document.getElementById("precio")
         var resultado1 = document.getElementById("consumo")
@@ -208,3 +219,8 @@ $(document).on('click', '.borrar', function (event) {
     event.preventDefault();
     $(this).closest('tr').remove();
 });
+
+
+
+
+/*     */

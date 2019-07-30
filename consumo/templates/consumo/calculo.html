@@ -11,9 +11,23 @@
 <!-- pagina de calculo de consumo electrico -->
 
 
+
+
 <div class="container my-5">
 <div class="card text-black  py-1  crema">
 <div class="card-body">
+  <!--selección de entidad y tarifa eléctrica-->
+  <h1 class="center">selección de entidad que suministra el servicio y tarifa</h1>
+  <div class="container">
+    <select  id="entidad" >
+      
+    </select>
+  </div>
+
+
+
+
+  <!--seleccion de artefacto-->
   <h1 class="center">seleccione categoría de artefacto</h1>
 
 <div class="container">
@@ -124,4 +138,5 @@
 
  {% block extraJS %}
     <script  src="{% static 'js/app1.js' %}"></script>
+    <script src="{% static 'js/gestionEntidad.js'%}"></script>
  {% endblock %}

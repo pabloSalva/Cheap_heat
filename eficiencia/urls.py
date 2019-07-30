@@ -23,7 +23,7 @@ urlpatterns = [
     
     #endPoint
 
-    path('api/artefactos/' ,include('consumo.urls') ),
+    path('api/' ,include('consumo.urls') ),
 
     #pagina Principal
     path('index/',views.index, name="indice"),

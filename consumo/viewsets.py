@@ -19,4 +19,8 @@ class ArtefactoElectricoViewSet(viewsets.ModelViewSet):
 class ArtefactoGasViewSet(viewsets.ModelViewSet):
     queryset = Artefacto.objects.filter(tipo__contains='gas')
     serializer_class = ArtefactoSerializer
-        
+
+
+class TarifasViewSet(viewsets.ModelViewSet):
+    queryset = Tarifas.objects.all()
+    serializer_class = TarifasSerializer
