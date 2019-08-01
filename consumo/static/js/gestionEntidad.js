@@ -1,21 +1,16 @@
-$('#entidad').on('click',function () {
+//función que trae las entidades electricas al select
+
+$('#cargarEntidad').on('click',function () {
     $.getJSON("../api/entidad",function(data) {
 
        console.log(data[0].nombre);
        var entidad = document.getElementById('entidad')
        entidad.innerHTML = '' 
        data.forEach(element => {
-       //for (var i =0; i<data.length;i++){ 
-            //console.log(data.length );
-        
-            
-            
-                
+           console.log(element);
+           
             entidad.innerHTML += `
-            <option value="${element.nombre}">${element.nombre}</option>
-        
-            `
-       // }   
+            <option value="${element.nombre}">${element.nombre}</option> `
        });
            
           
@@ -24,3 +19,19 @@ $('#entidad').on('click',function () {
     })
     
 })
+
+
+//creación de tarifas electricas de la entidad seleccionada
+
+$('#entidad').on('click',function () {
+    var seleccionada = document.getElementById('entidad').value
+    //var text = seleccionada.options[seleccionada.selectedIndex].innerText
+    $.getJSON("../api/tarifa/"+seleccionada, function (data) {
+        console.log(data);
+        
+        
+    })
+
+})
+
+

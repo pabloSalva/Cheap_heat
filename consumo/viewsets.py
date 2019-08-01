@@ -24,3 +24,6 @@ class ArtefactoGasViewSet(viewsets.ModelViewSet):
 class TarifasViewSet(viewsets.ModelViewSet):
     queryset = Tarifas.objects.all()
     serializer_class = TarifasSerializer
+
+
+    
