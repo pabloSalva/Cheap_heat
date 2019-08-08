@@ -1,4 +1,5 @@
 from rest_framework import viewsets
+from rest_framework.response import Response
 
 from .models import Provincia,Partido,Localidad,Entidad,Tarifas,Artefacto
 
@@ -26,4 +27,9 @@ class TarifasViewSet(viewsets.ModelViewSet):
     serializer_class = TarifasSerializer
 
 
-    
+
+    def Tarifa_entidad(self,request,pk):
+        tarifas = Tarifas.objects.get(pk=pk)
+       
+
+        return Response(tarifas.data)

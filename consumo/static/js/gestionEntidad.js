@@ -24,13 +24,25 @@ $('#cargarEntidad').on('click',function () {
 //creación de tarifas electricas de la entidad seleccionada
 
 $('#entidad').on('click',function () {
-    var seleccionada = document.getElementById('entidad').value
-    //var text = seleccionada.options[seleccionada.selectedIndex].innerText
-    $.getJSON("../api/tarifa/"+seleccionada, function (data) {
+    //var seleccionada = document.getElementById('entidad').value
+    var tarifa = document.getElementById('tarifas')
+    $.getJSON("../api/tarifas/1", function (data) {
         console.log(data);
+        tarifa.innerHTML = ''
         
+        tarifa.innerHTML += `
+            <option id="opcion" value="${data.codigo}">${data.codigo}</option> 
+            `
+      
+        var list = document.getElementById("listaPrecio")
+        list.innerHTML = ''
+        list.innerHTML += `
+            <li id = "cargofijo">Cargo fijo: ${data.cargofijo}</li>
+            <li id = "preciokwh">Precio Kw/h: ${data.precioKwh}</li>
+            `
         
     })
+    
 
 })
 

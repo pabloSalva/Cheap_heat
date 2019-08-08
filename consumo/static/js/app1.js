@@ -197,7 +197,15 @@ $('#calcular').on('click',function(){
             console.log("total: " + total);
                 
         };//fin forEach
-        var res = ((total*1.9)/1000) 
+        var tarifa = document.getElementById('tarifas').value
+        console.log("tarifa seleccionada: " +tarifa);
+        var cargoFijo = document.getElementById('cargofijo').value
+        var preciokwh = document.getElementById('preciokwh').value 
+        console.log("cargo fijo: " +cargofijo);
+        console.log("precio kw: " + preciokwh);
+        
+
+        var res = ((cargoFijo + (total*preciokwh))/1000) 
         var resultado = document.getElementById("precio")
         var resultado1 = document.getElementById("consumo")
         //var resultado2 = document.getElementById("cantPaneles")
