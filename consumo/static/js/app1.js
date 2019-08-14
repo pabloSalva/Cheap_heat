@@ -198,21 +198,24 @@ $('#calcular').on('click',function(){
                 
         };//fin forEach
         var tarifa = document.getElementById('tarifas').value
+
+        var columnasTarifas=$("#cuerpoTablaTarifa tr td")
+
         console.log("tarifa seleccionada: " +tarifa);
-        var cargoFijo = document.getElementById('cargofijo').value
-        var preciokwh = document.getElementById('preciokwh').value 
-        console.log("cargo fijo: " +cargofijo);
+        var cargoFijo = parseFloat(columnasTarifas[0].textContent)
+        var preciokwh = parseFloat(columnasTarifas[1].textContent)
+        console.log("cargo fijo: " +cargoFijo);
         console.log("precio kw: " + preciokwh);
         
 
-        var res = ((cargoFijo + (total*preciokwh))/1000) 
+        var res = parseInt((cargoFijo + (total*preciokwh))/1000) 
         var resultado = document.getElementById("precio")
         var resultado1 = document.getElementById("consumo")
         //var resultado2 = document.getElementById("cantPaneles")
         var resultado3 = document.getElementById("panel")
         // resultado.innerHTML = '';
         resultado.innerHTML = "precio de consumo electrico: $"+ res
-        resultado1.innerHTML="el total de KW consumidos en el periodo  es: "+total
+        resultado1.innerHTML="el total de KiloWatts consumidos en el periodo  es: "+(total/1000)+"KW"
         //resultado2.innerHTML=  "con X paneles solares se puede reducir el precio de consumo"
         resultado3.innerHTML = `<img src="../static/img/iconoPanel.jpg" alt="">` 
         

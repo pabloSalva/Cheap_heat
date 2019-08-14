@@ -34,11 +34,11 @@ $('#entidad').on('click',function () {
             <option id="opcion" value="${data.codigo}">${data.codigo}</option> 
             `
       
-        var list = document.getElementById("listaPrecio")
+        var list = document.getElementById("cuerpoTablaTarifa")
         list.innerHTML = ''
         list.innerHTML += `
-            <li id = "cargofijo">Cargo fijo: ${data.cargofijo}</li>
-            <li id = "preciokwh">Precio Kw/h: ${data.precioKwh}</li>
+            <td>${data.cargofijo}</td>
+            <td>${data.precioKwh}</td>
             `
         
     })
