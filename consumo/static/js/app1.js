@@ -184,8 +184,23 @@ $('#calcular').on('click',function(){
             var cant = parseInt(columnas[4].innerText)
             console.log("valor de cantidad seleccionada: "+ cant)
 
-            var consumo=parseInt(columnas[3].textContent);
-            console.log("consumo:" + consumo);
+            //comprueba si es aire acondicionado
+            var esAire = columnas[0].innerText
+
+            if (esAire == "Aire Acondicionado") {
+                var consumo=parseInt(columnas[3].textContent);
+                consumo = consumo * (1/3)
+                console.log("consumo aire: " +consumo);
+                
+                
+            } else {
+                var consumo=parseInt(columnas[3].textContent);
+                console.log("consumo normal:" + consumo);
+                
+            }
+            
+
+            
             
             var horas = document.getElementById('horas');
             console.log("horas: " + horas.value);
@@ -193,7 +208,7 @@ $('#calcular').on('click',function(){
             var dias = document.getElementById('dias');
             console.log("dias: " + dias.value);
             total += cant*consumo*horas.value*dias.value
-            //total += cantidad.value*consumo*horas.value*dias.value;
+           
             console.log("total: " + total);
                 
         };//fin forEach
@@ -208,16 +223,14 @@ $('#calcular').on('click',function(){
         console.log("precio kw: " + preciokwh);
         
 
-        var res = parseInt((cargoFijo + (total*preciokwh))/1000) 
+        var res = parseFloat((cargoFijo + (total/1000)*preciokwh)) 
         var resultado = document.getElementById("precio")
         var resultado1 = document.getElementById("consumo")
-        //var resultado2 = document.getElementById("cantPaneles")
-        var resultado3 = document.getElementById("panel")
-        // resultado.innerHTML = '';
-        resultado.innerHTML = "precio de consumo electrico: $"+ res
-        resultado1.innerHTML="el total de KiloWatts consumidos en el periodo  es: "+(total/1000)+"KW"
-        //resultado2.innerHTML=  "con X paneles solares se puede reducir el precio de consumo"
-        resultado3.innerHTML = `<img src="../static/img/iconoPanel.jpg" alt="">` 
+        
+        resultado.innerHTML = "precio de consumo electrico: $"+ res.toFixed(3)
+        resultado1.innerHTML="el total de KiloWatts consumidos en el periodo  es: "+(total/1000).toFixed(3)+"KW"
+        
+         
         
         console.log(res)
         

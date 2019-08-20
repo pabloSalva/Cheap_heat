@@ -1,30 +1,30 @@
-KIT SOLAR de 1000 WATTS 220 VOLTS AUTÓNOMO CASA de CAMPO CORTES DE LUZ MAS AUTONOMÍA
+KIT SOLAR de 1000 WATTS 220 VOLTS AUTï¿½NOMO CASA de CAMPO CORTES DE LUZ MAS AUTONOMï¿½A
 
 INCLUYE
 
-2 Panel de 160 W Policristalino (Vida útil de 25 a 30 años). Medidas en milímetros (1500 x 676 x 30).
-1 Regulador de carga 12V – 30 A Inteligente (con display y puerto USB).
+2 Panel de 160 W Policristalino (Vida ï¿½til de 25 a 30 aï¿½os). Medidas en milï¿½metros (1500 x 676 x 30).
+1 Regulador de carga 12V ï¿½ 30 A Inteligente (con display y puerto USB).
 1 Conector MC4 para instalar los paneles en paralelo
-2 Batería 12 V – 110 Ah VZH Industria Argentina de uso Solar y Estacionaria.
-1 Inversor 12 V a 220 V – 1000 W onda modificada Probattery o Ltceco
-1 juegos de cable, para conexión a baterías
+2 Baterï¿½a 12 V ï¿½ 110 Ah VZH Industria Argentina de uso Solar y Estacionaria.
+1 Inversor 12 V a 220 V ï¿½ 1000 W onda modificada Probattery o Ltceco
+1 juegos de cable, para conexiï¿½n a baterï¿½as
 
 CON ESTE EQUIPO PODES ALIMENTAR
 
-– TV
-– 1 computadora
-– 1 heladera con frezzer
-– Cargar Celulares
-– 6 a 8 lamparas Led de 3 a 4 Watts
-– Pequeños electrodomésticos
-– Cualquier electrodoméstico que no supere los 1000 watts con picos máximos de arranque de 2500 watts
+ï¿½ TV
+ï¿½ 1 computadora
+ï¿½ 1 heladera con frezzer
+ï¿½ Cargar Celulares
+ï¿½ 6 a 8 lamparas Led de 3 a 4 Watts
+ï¿½ Pequeï¿½os electrodomï¿½sticos
+ï¿½ Cualquier electrodomï¿½stico que no supere los 1000 watts con picos mï¿½ximos de arranque de 2500 watts
 
 GENERALIDADES
 
 Es escalable, ampliable.
-Incluye los cables inversor batería
+Incluye los cables inversor baterï¿½a
 Incluye Instructivo
-El regulador con USB proteje la batería de sobrecargas
+El regulador con USB proteje la baterï¿½a de sobrecargas
 Los paneles toleran granizadas
 Son autoinstalables listos para Usar y libre de Mantenimiento.
 
@@ -38,7 +38,7 @@ para 270 W
 
 Detalles del producto: "ND-AK270"
 
-Tipo de célula: Policristalina
+Tipo de cï¿½lula: Policristalina
 
 Potencia nominal W / p: 270,0 W
 
@@ -50,9 +50,9 @@ Optimizador incl .: no
  > 1000 W
 
 
-5000 W: En muchos lugares, los usuarios de instalaciones fotovoltaicas están obligados a disponer de una función de gestión para la inyección cero a red. Esta función permite reducir la producción del sistema, lo que puede ser especialmente importante si se sobrecargan tramos de la red de distribución o transmisión, también en regiones que experimentan un rápido desarrollo en energías renovables.
+5000 W: En muchos lugares, los usuarios de instalaciones fotovoltaicas estï¿½n obligados a disponer de una funciï¿½n de gestiï¿½n para la inyecciï¿½n cero a red. Esta funciï¿½n permite reducir la producciï¿½n del sistema, lo que puede ser especialmente importante si se sobrecargan tramos de la red de distribuciï¿½n o transmisiï¿½n, tambiï¿½n en regiones que experimentan un rï¿½pido desarrollo en energï¿½as renovables.
 
-MUST POWER ofrece una solucion para la gestión de inyección a red en instalaciones FV. Además, conectando un dispositivo de control remoto al inversor con la ayuda del transmisor WI FI ofrece un control dinámico de inyección cero, que tiene en cuenta la tasa actual de autoconsumo. Esto permite maximizar el uso de la energía solar autogenerada. 
+MUST POWER ofrece una solucion para la gestiï¿½n de inyecciï¿½n a red en instalaciones FV. Ademï¿½s, conectando un dispositivo de control remoto al inversor con la ayuda del transmisor WI FI ofrece un control dinï¿½mico de inyecciï¿½n cero, que tiene en cuenta la tasa actual de autoconsumo. Esto permite maximizar el uso de la energï¿½a solar autogenerada. 
 
 NO REQUIERE NINGUNA HABILITACION NI MEDIDOR BIDIRECCIONAL
 
@@ -60,29 +60,44 @@ NO REQUIERE NINGUNA HABILITACION NI MEDIDOR BIDIRECCIONAL
 
 CONTENIDO DEL KIT OFRECIDO MONOFASICO 5KW INYECCION CERO
 
-- 1 INVERSOR MUST ON GRID MONOFASICO 5.000 WATTS POR HORA (diario 25.000 watts/dia promedio año).
-- 1 SENSOR INYECCIÓN CERO DE EXCEDENTES (no requiere medidores bidireccionales).
+- 1 INVERSOR MUST ON GRID MONOFASICO 5.000 WATTS POR HORA (diario 25.000 watts/dia promedio aï¿½o).
+- 1 SENSOR INYECCIï¿½N CERO DE EXCEDENTES (no requiere medidores bidireccionales).
 - 1 TRANSMISOR WI FI DE DATOS. APP MOBILE
 
-* Todos los manuales en español. Plano de conexión.
+* Todos los manuales en espaï¿½ol. Plano de conexiï¿½n.
 
 ////////////////////////////////////////////////////////////////
 
 INVERSOR ON GRID MUST POWER 
 
 Serie PH5000 (2.5-6KW)
-Los inversores fotovoltaicos de la serie PH5000 tienen plenamente en cuenta las necesidades de los clientes finales, al mismo tiempo que utilizan un rendimiento excelente, utilizan el LED como pantalla de estado del inversor y mejoran la vida del producto. Usando el control digital DSP, podría permitirse un amplio rango de voltaje de red, tener una gama completa de características de protección; para maximizar los beneficios al mismo tiempo, mejorar enormemente la confiabilidad del producto.
+Los inversores fotovoltaicos de la serie PH5000 tienen plenamente en cuenta las necesidades de los clientes finales, al mismo tiempo que utilizan un rendimiento excelente, utilizan el LED como pantalla de estado del inversor y mejoran la vida del producto. Usando el control digital DSP, podrï¿½a permitirse un amplio rango de voltaje de red, tener una gama completa de caracterï¿½sticas de protecciï¿½n; para maximizar los beneficios al mismo tiempo, mejorar enormemente la confiabilidad del producto.
 
 Caracteristicas:
 Tasa de potencia: 5 KW
 Amplia gama de voltaje MPPT 100-500V
 Eficacia MPPT hasta 99.50%.
 Opcional control integrado antirreflujo
-Múltiples comunicaciones: USB, WIFI etc.
-Monitorización de inversores libremente a través de la aplicación de teléfono móvil.
+Mï¿½ltiples comunicaciones: USB, WIFI etc.
+Monitorizaciï¿½n de inversores libremente a travï¿½s de la aplicaciï¿½n de telï¿½fono mï¿½vil.
 Factor de potencia ajustable continuo
-Garantía de cinco años
+Garantï¿½a de cinco aï¿½os
 
-COMUNICACIÓN WIFI
-Puede descargar esta aplicación en su teléfono celular y monitorear todo el sistema, sabrá cuánta electricidad genera y vende el sistema a la empresa de servicios públicos.
+COMUNICACIï¿½N WIFI
+Puede descargar esta aplicaciï¿½n en su telï¿½fono celular y monitorear todo el sistema, sabrï¿½ cuï¿½nta electricidad genera y vende el sistema a la empresa de servicios pï¿½blicos.
 
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////7
+
+
+el consumo electrico en aires acondicionados es aproximadamente un tercio de la potencia.
+
+Al momento de comprar un electrodomÃ©stico nuevo, se recomienda elegir aquellos que poseen Etiqueta de Eficiencia EnergÃ©tica Clase
+â€œAâ€.
+
+En un aire acondicionado "clase A" te ahorrÃ¡s hasta un 40% de luz respecto del consumo de otro que no es de consumo eficiente, 
+pero sale mÃ¡s econÃ³mico a la hora de comprarlo. No obstante, si bien los aparatos de etiqueta "A" son bastante mÃ¡s caros,
+ "generalmente, en un aÃ±o y medio de uso, recuperÃ¡s la diferencia del costo inicial", explicÃ³ Andrea Heins, ex subsecretaria 
+ de Ahorro y Eficiencia EnergÃ©tica.

@@ -19,7 +19,7 @@
   <!--selección de entidad y tarifa eléctrica-->
   <h1 class="center">selección de entidad que suministra el servicio y tarifa</h1>
   <div class="container">
-    <button id="cargarEntidad">cargar entidades</button>
+    <button class="btn btn-secondary" id="cargarEntidad">cargar entidades</button>
     <select  id="entidad" >
       <option>Entidades</option>
       
@@ -114,7 +114,7 @@
             </tbody>
             
           </table>  
-          <button type="button" class="btn btn-primary" id="calcular"> Calcular</button>
+          <button type="button" class="btn btn-secondary" id="calcular"> Calcular</button>
           
       
         </div>
@@ -139,10 +139,16 @@
 
 <div class="card text-black  py-1 text-center crema">
   <div class="card-body" id="panel">
-  <p align="left" class="text-black m-0" id="cantPaneles"></p>
+      
+    <button align="left" class="btn btn-secondary float-left" id="cantPaneles">Calculo de cantidad de paneles</button>
+
   
     
   </div>
+  <div id="infoPanel" >
+    
+    </div>
+  
 </div>
     {% endblock %}
 
@@ -159,4 +165,5 @@
  {% block extraJS %}
     <script  src="{% static 'js/app1.js' %}"></script>
     <script src="{% static 'js/gestionEntidad.js'%}"></script>
+    <script src="{% static 'js/calculoPaneles.js'%}"></script>
  {% endblock %}
