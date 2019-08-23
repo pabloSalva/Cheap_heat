@@ -37,8 +37,8 @@ $('#entidad').on('click',function () {
         var list = document.getElementById("cuerpoTablaTarifa")
         list.innerHTML = ''
         list.innerHTML += `
-            <td>${data.cargofijo}</td>
-            <td>${data.precioKwh}</td>
+            <td>${data.cargofijo} pesos</td>
+            <td>${data.precioKwh} pesos</td>
             `
         
     })

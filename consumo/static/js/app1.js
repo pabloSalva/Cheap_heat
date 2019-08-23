@@ -227,7 +227,7 @@ $('#calcular').on('click',function(){
         var resultado = document.getElementById("precio")
         var resultado1 = document.getElementById("consumo")
         
-        resultado.innerHTML = "precio de consumo electrico: $"+ res.toFixed(3)
+        resultado.innerHTML = "precio de consumo electrico: $"+ res.toFixed(1)
         resultado1.innerHTML="el total de KiloWatts consumidos en el periodo  es: "+(total/1000).toFixed(3)+"KW"
         
          

@@ -47,6 +47,23 @@ $('#cantPaneles').on('click',function () {
             
     }
     
-    
+    infoPanel.innerHTML += `<button align="left" class="btn btn-secondary float-left" id="renovables">Más acerca de Energías renovables</button>`
 
 })
+
+/*
+switch (true) {
+    case x > 0 && x < 10:
+        alert("x > 0 && x < 10");
+        break;
+    case x > 0 && x < 20:
+        alert("x > 0 && x < 20");
+        break;
+    case x < 0 || x > 100:
+        alert("x < 0 || x > 10");
+        break;
+    default:
+        alert("Ninguno");
+}
+
+*/

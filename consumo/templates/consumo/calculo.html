@@ -19,19 +19,25 @@
   <!--selección de entidad y tarifa eléctrica-->
   <h1 class="center">selección de entidad que suministra el servicio y tarifa</h1>
   <div class="container">
-    <button class="btn btn-secondary" id="cargarEntidad">cargar entidades</button>
-    <select  id="entidad" >
+    <button class="btn btn-secondary text-white font-weight-bold" id="cargarEntidad">Proveedor</button>
+    <div>
+    
+    <select class="form-control mr-sm-2"  id="entidad" >
       <option>Entidades</option>
       
     </select>
-    <select  id="tarifas" >
+  
+    
+      <h2 class="text-secondary">Tarifas</h2>
+    <select class="form-control mr-sm-2" id="tarifas" >
       <option>Tarifas</option>
       
     </select>
-  <table id="tablaTarifa">
+  </div>
+  <table class="table table-hover table-condensed table-bordered" id="tablaTarifa">
     <thead>
       <tr>
-        <td>cargo fijo</td>
+        <td class="font-weight-bold text-danger">cargo fijo </td>
         <td>precio Kw/h</td>
       </tr>
     </thead>
@@ -122,7 +128,7 @@
 	  {% block precio%}
     <div class="card text-black  py-1 text-center crema">
       <div class="card-body">
-      <p align="left" class="text-black m-0" id="precio"></p>
+      <p align="left" class="font-weight-bold text-danger" id="precio"></p>
         
       </div>
     </div>
@@ -131,7 +137,7 @@
 
 <div class="card text-black  py-1 text-center crema">
   <div class="card-body">
-  <p align="left" class="text-black m-0" id="consumo"></p>
+  <p align="left" class="font-weight-bold text-danger" id="consumo"></p>
  
     
   </div>
