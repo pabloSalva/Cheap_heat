@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path,include
 from consumo import views
 
+from django.conf.urls import url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     
@@ -33,6 +35,9 @@ urlpatterns = [
     path('calculo/',views.calculador,name="calculo"),
     path('calculoGas',views.calculadorGas, name="calculoGas"),
     
+    #registro usuario
+
+    path('registrar/', views.RegistroUsiario.as_view(), name = "registroUsuario"),
     
     #urls de sugerencias
 
