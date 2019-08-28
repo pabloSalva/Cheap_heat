@@ -43,4 +43,9 @@ def calefaccion(request):
     return render(request , "consumo/calefaccion.html") 
 def renovable(request):
     return render(request, "consumo/renovable.html")
-      
+
+
+#Pagina principal constructores
+
+def construccion(request):
+    return render(request, "Constructores/indexConstructor.html")      

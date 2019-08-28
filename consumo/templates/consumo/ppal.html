@@ -43,11 +43,14 @@
             </a>
           </li>
           {% if user.is_authenticated %}
-          <li class="nav-item">User: {{ user.get_username }}</li>
-            <li><a href="#">Logout</a></li> 
           <li >
-            <a class="nav-link" href="#">{{User.username}}</a>
+            <a class="nav-link" href="#">{{ user.get_username }}(Docente)</a>
           </li>
+          
+          <li class="nav-link"> 
+            <a href="#">Logout</a> 
+          </li>  
+          
           {% else %}
           <li><a href="#">Login</a></li>   
            {% endif %} 

@@ -48,4 +48,8 @@ urlpatterns = [
     path('calefaccion/',views.calefaccion,name="calefaccion"),
     path('renovable/', views.renovable, name="renovable"),
 
+    #urls de constructores
+    path('constructor/', views.construccion, name= "constructor"),
+
+
 ]

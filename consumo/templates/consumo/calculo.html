@@ -13,11 +13,17 @@
 
 
 
+
+
 <div class="container my-5">
 <div class="card text-black  py-1  crema">
 <div class="card-body">
+    <h1 class="text-secondary">
+        Simulador de consumo eléctrico
+      </h1>
+
   <!--selección de entidad y tarifa eléctrica-->
-  <h1 class="center">selección de entidad que suministra el servicio y tarifa</h1>
+  <h2 class="center text-secondary">Selección de Proveedor que suministra el servicio y tarifa</h2>
   <div class="container">
     <button class="btn btn-secondary text-white font-weight-bold" id="cargarEntidad">Proveedor</button>
     <div>
@@ -28,7 +34,7 @@
     </select>
   
     
-      <h2 class="text-secondary">Tarifas</h2>
+      <h3 class="text-secondary">Tarifas</h3>
     <select class="form-control mr-sm-2" id="tarifas" >
       <option>Tarifas</option>
       
@@ -144,16 +150,15 @@
 </div>
 
 <div class="card text-black  py-1 text-center crema">
-  <div class="card-body" id="panel">
-      
     <button align="left" class="btn btn-secondary float-left" id="cantPaneles">Calculo de cantidad de paneles</button>
-
-  
-    
-  </div>
   <div id="infoPanel" >
     
-    </div>
+  </div>
+  <div class="card-body" id="panel">
+      
+    
+    
+  </div>  
   
 </div>
     {% endblock %}
