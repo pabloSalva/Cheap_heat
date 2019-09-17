@@ -34,6 +34,15 @@
         <small id="emailHelp" class="form-text text-muted">no compartiremos su correo con nadie</small>
     </div>
 
+    <div class="form-group">
+        <select name="grupo" id="grup">
+            {% for g in group %}
+            <option value="">{{}}</option>
+        </select>
+        <input type="text" class="form-control"  placeholder="elija un grupo" name="">
+        
+    </div>
+
     
 
     <div class="form-group">

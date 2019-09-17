@@ -2,3 +2,5 @@
 /consumo/__pycache__
 /consumo/migrations/__pycache__
 /eficiencia/__pycache__
+db.sqlite3
+/.vscode
