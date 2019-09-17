@@ -47,7 +47,7 @@ $('#Agregar').on({click:function(){
 
 
         checked.forEach(element => {
-                    
+                    var id =0;
                     data.forEach(select => {
                         if (element == select.id) {
                             contenido.innerHTML += `
@@ -58,7 +58,7 @@ $('#Agregar').on({click:function(){
                             <td>${select.consumo}</td>
                             
                             <td id="seleccion">
-                            <select id="cantidad">
+                            <select id="cantidad`+id+`">
                             <option value=1>1</option>
                             <option value=2>2</option>
                             <option value=3>3</option>
@@ -67,7 +67,7 @@ $('#Agregar').on({click:function(){
                             <option value=6>6</option>
                             </select></td>
 
-                            <td><select id="horas">
+                            <td><select id="horas`+id+`">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -76,7 +76,7 @@ $('#Agregar').on({click:function(){
                                 <option>6</option>
                             </select></td>
                             <td>
-                            <select id="dias">
+                            <select id="dias`+id+`">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -120,9 +120,11 @@ $('#Agregar').on({click:function(){
             
                             
                         }
+                        id++;
             
                     
                     });
+                    
                     
                 });
                 
@@ -168,6 +170,7 @@ $('#calcular').on('click',function(){
         // obtenemos las columnas de cada fila
         
         //filas.forEach(function(e) {
+        let id = 0;
         for (let index = 0; index < filas.length; index++) {
             
             
@@ -181,8 +184,9 @@ $('#calcular').on('click',function(){
             //console.log("cantidad seleccionada: "+cantidad)
          
             //prueba para obtener las cantidades reales de cantidad e items seleccionados
-            var cant = parseInt(columnas[4].innerText)
-            console.log("valor de cantidad seleccionada: "+ cant)
+            //var cant = parseInt(columnas[4].innerText)
+            var cant = document.getElementById('cantidad'+id)
+            console.log("valor de cantidad seleccionada: "+ cant.value)
 
             //comprueba si es aire acondicionado
             var esAire = columnas[0].innerText
@@ -202,16 +206,17 @@ $('#calcular').on('click',function(){
 
             
             
-            var horas = document.getElementById('horas');
+            var horas = document.getElementById('horas'+id);
             console.log("horas: " + horas.value);
 
-            var dias = document.getElementById('dias');
+            var dias = document.getElementById('dias'+id);
             console.log("dias: " + dias.value);
-            total += cant*consumo*horas.value*dias.value
+            total += cant.value*consumo*horas.value*dias.value
            
             console.log("total: " + total);
+            id++;
                 
-        };//fin forEach
+        };//fin for
         var tarifa = document.getElementById('tarifas').value
 
         var columnasTarifas=$("#cuerpoTablaTarifa tr td")
