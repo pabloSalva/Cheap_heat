@@ -59,3 +59,14 @@ class Artefacto(models.Model):
     def __str__(self):
         return "%s %s" % (self.nombre_artefacto,str(self.consumo))
 
+#Agregar modelo de tipos de materiales de construccion con sus respectivos coeficientes termicos
+
+class Material(models.Model):
+    users = models.ManyToManyField(User , related_name= None)
+    nombre_material = models.CharField(max_length = 40)
+    tipo = models.CharField(max_length = 40)
+    conductividad_termica = models.FloatField(default = 0)
+    estado = models.Charfield(max_length = 10) #sólido líquido o gaseoso
+    
+
+

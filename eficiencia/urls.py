@@ -50,6 +50,7 @@ urlpatterns = [
 
     #urls de constructores
     path('constructor/', views.construccion, name= "constructor"),
+    path('constructor/nuevaVivienda', views.nueva, name="nuevaVivienda")
 
 
 ]

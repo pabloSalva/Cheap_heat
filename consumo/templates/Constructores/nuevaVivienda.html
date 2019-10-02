@@ -1,0 +1,30 @@
+{% extends 'consumo/ppal.html' %}
+{% load static %}
+
+{% block title %}
+<title>Nueva vivienda</title>
+{% endblock  %}
+
+
+{% block content %}
+<h1>Crear una nueva vivienda</h1>
+<h2>selección de cantidad y tipos de ambientes</h2>
+<button class="btn-btn">Forma de ambiente</button>
+<div>
+    <h3>cantidad de ambientes</h3>
+<select name="ambientes" id="cantidadAmbientes" title="cantidad de ambientes" >
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+</div>
+
+<h2>ver y agregar tipos de materiales de construcción</h2>
+<button class="btn-btn" id="listaMaterial">Ver listado de materiales</button>
+<button class="btn-btn" id="agregarMaterial">Agregar material</button>
+<button class="btn-btn" id="editarMaterial">Editar material</button>
+
+
+{% endblock %}

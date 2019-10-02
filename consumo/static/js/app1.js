@@ -36,6 +36,7 @@ $(".traer").on('click',function(){
 $('#Agregar').on({click:function(){
     $.getJSON(" ../api/electricos",function(data){
         var checked = [];//arreglo que gusrdará los artefactos seleccionados por el ususario
+       
         //Recorro todos los input checkbox con name = artefactos y que se encuentren "checked"
         $("input[name='artefactos']:checked").each(function (){
             //Mediante la función push agrego al arreglo los values de los checkbox

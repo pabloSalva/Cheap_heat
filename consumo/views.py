@@ -49,3 +49,6 @@ def renovable(request):
 
 def construccion(request):
     return render(request, "Constructores/indexConstructor.html")      
+
+def nueva(request):
+    return render(request, "Constructores/nuevaVivienda.html")    
