@@ -66,7 +66,7 @@ class Material(models.Model):
     nombre_material = models.CharField(max_length = 40)
     tipo = models.CharField(max_length = 40)
     conductividad_termica = models.FloatField(default = 0)
-    estado = models.Charfield(max_length = 10) #sólido líquido o gaseoso
+    estado = models.CharField(max_length = 10) #sólido líquido o gaseoso
     
 
 
