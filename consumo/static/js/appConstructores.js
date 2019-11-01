@@ -12,31 +12,63 @@ $('#exampleModal').on('show.bs.modal', function (event) {
     modal.find('.modal-body input').val(recipient)
   })
 
-  $("#cargaMaterial").click(function(){
-    $("#cargadeMaterial").text($("form").serialize());
-    console.log("hola");
+
+  var formulario = document.getElementById('formulario1');
+
+  formulario.addEventListener('submit',function (e) {
+    e.preventDefault();
+
+    var datos = new FormData(formulario);
+
+    console.log(datos.get('nombre_material'));
     
+    var url = 'http://localhost:8000/api/materiales/'
+
+    fetch(url,{
+      method:'POST',
+      body:JSON.stringify(datos),
+      headers:{
+        'Content-Type' : 'appliction/json'
+      }
+    })
+    .then(res => res.json())
+    .catch(error => console.error('Error: ',error))
+    .then(response => console.log('Success: ', response));
   });
-  
-//   $( "cargaMaterial" ).on( "submit", function( event ) {
-//     event.preventDefault();
-//     console.log( 'hola' +$( this ).serialize() );
-//   });
 
 
 
 
-//funcion que envìa los datos por post
 
-// var url = 'https://example.com/profile';
-// var data = {username: 'example'};
+  //$("#cargaMaterial").click(function(){
+    
+    
+    //const data = new FormData(document.getElementById('formulario1'));
+    //console.log(formData);
+    
+    //funcion que envìa los datos por post
 
-// fetch(url, {
-//   method: 'POST', // or 'PUT'
-//   body: JSON.stringify(data), // data can be `string` or {object}!
-//   headers:{
-//     'Content-Type': 'application/json'
-//   }
-// }).then(res => res.json())
-// .catch(error => console.error('Error:', error))
-// .then(response => console.log('Success:', response));
+    //var url = 'http://localhost:8000/api/materiales';
+    //var formData = JSON.stringify($("#formulario1").serializeArray());
+    //var data = {username: 'example'};
+
+    //fetch(url, {
+      // method: 'POST', // or 'PUT'
+       //body: JSON.stringify(formData), // data can be `string` or {object}!
+       //headers:{
+      //'Content-Type': 'application/json'
+      //}
+    //}).then(res => res.json())
+    //.catch(error => console.error('Error:', error))
+    //.then(response => console.log('Success:', response));
+
+    
+    //$("#cargadeMaterial").text($("form").serialize());
+    //console.log("hola");
+    
+  //});
+
+ 
+
+
+

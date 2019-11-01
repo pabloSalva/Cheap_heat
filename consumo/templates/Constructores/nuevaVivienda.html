@@ -22,7 +22,7 @@
 </div>
 
 <h2>ver y agregar tipos de materiales de construcción</h2>
-<button class="btn-btn" id="listaMaterial">Ver listado de materiales</button>
+<button class="btn btn-primary" id="listaMaterial">Ver listado de materiales</button>
 
 
 <button type="button" class="btn btn-primary" id="agregarMaterial" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar material</button>
@@ -37,32 +37,37 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div id="cargadeMaterial" class="modal-body">
+      <div  class="modal-body">
 
-        <form >
+        <form   id="formulario1">
           <div class="form-group">
             <label class="col-form-label">nombre del material</label>
-            <input type="text" class="form-control" id="nombreMaterial">
+            <input type="text" class="form-control" id="nombreMaterial" name="nombre_material">
           </div>
           
           <div class="form-group">
             <label class="col-form-label">tipo de material</label>
-            <input type="text" class="form-control" id="tipoMaterial">
+            <input type="text" class="form-control" id="tipoMaterial" name="tipo">
           </div>
 
           <div class="form-group">
             <label class="col-form-label">espesor</label>
-            <input type="text" class="form-control" id="espesor">
+            <input type="text" class="form-control" id="espesor" name="espesor">
           </div>
           
           <div class="form-group">
             <label class="col-form-label">conductividad térmica</label>
-            <input type="text" class="form-control" id="conductividadTermica">
+            <input type="text" class="form-control" id="conductividadTermica" name="conductividad_termica">
           </div>
           
           <div class="form-group">
             <label class="col-form-label">estado</label>
-            <input type="text" class="form-control" id="estado">
+            <input type="text" class="form-control" id="estado" name="estado">
+          </div>
+
+           <div class="form-group">
+            <label class="col-form-label">Usuario</label>
+            <input type="text" class="form-control" id="estado" name="user">
           </div>
           
           <button type="submit" class="btn btn-primary" id="cargaMaterial" >Crear</button>
@@ -76,7 +81,7 @@
   </div>
 </div>
 
-<button class="btn-btn" id="editarMaterial">Editar material</button>
+<button class="btn btn-primary" id="editarMaterial">Editar material</button>
 
 
 {% endblock %}

@@ -107,3 +107,9 @@ pero sale más económico a la hora de comprarlo. No obstante, si bien los apara
 
 
  https://www.programasvirtualespc.net/windows/activar-y-validar-windows-7/
+
+
+
+
+Pagina para poder configurar el middleware
+ https://www.techiediaries.com/django-cors/
