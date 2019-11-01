@@ -1,9 +1,9 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
 
-from .models import Provincia,Partido,Localidad,Entidad,Tarifas,Artefacto
+from .models import Provincia,Partido,Localidad,Entidad,Tarifas,Artefacto,Material
 
-from .serializer import PartidoSerializer,PartidoSerializer,LocalidadSerializer,EntidadSerializer,TarifasSerializer,ArtefactoSerializer
+from .serializer import PartidoSerializer,PartidoSerializer,LocalidadSerializer,EntidadSerializer,TarifasSerializer,ArtefactoSerializer,MaterialSerializer
 
 
 class ArtefactoViewSet(viewsets.ModelViewSet):
@@ -33,3 +33,7 @@ class TarifasViewSet(viewsets.ModelViewSet):
        
 
         return Response(tarifas.data)
+
+class MaterialesViewSet(viewsets.ModelViewSet):
+    queryset = Material.objects.all()
+    serializer_class = MaterialSerializer

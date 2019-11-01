@@ -50,7 +50,10 @@ urlpatterns = [
 
     #urls de constructores
     path('constructor/', views.construccion, name= "constructor"),
-    path('constructor/nuevaVivienda', views.nueva, name="nuevaVivienda")
+    path('constructor/nuevaVivienda', views.nueva, name="nuevaVivienda"),
+
+    # urls frontend react
+    path('', include('frontend.urls')),
 
 
 ]

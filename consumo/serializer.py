@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Provincia,Partido,Localidad,Entidad,Tarifas,Artefacto
+from .models import Provincia,Partido,Localidad,Entidad,Tarifas,Artefacto,Material
 
 
 class ProvinciaSerializer(serializers.ModelSerializer):
@@ -29,6 +29,12 @@ class ArtefactoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Artefacto
         fields = '__all__'
+class MaterialSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Material
+        fields = '__all__'
+                
 
 
 

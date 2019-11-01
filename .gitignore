@@ -4,3 +4,4 @@
 /eficiencia/__pycache__
 db.sqlite3
 /.vscode
+node_modules

@@ -6,10 +6,6 @@ from django.urls import reverse_lazy
 from consumo.forms import RegistroForm
 
 
-
-
-# Create your views here.
-
 class RegistroUsiario(CreateView):
     model = User
     template_name = "usuario/registrar.html"
