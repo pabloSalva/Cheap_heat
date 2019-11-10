@@ -67,7 +67,7 @@ class Material(models.Model):
     nombre_material = models.CharField(max_length = 40)
     tipo = models.CharField(max_length = 40) #vidiro, hormigon...
     espesor = models.FloatField(default = 0) # el espesor està expresado en metros
-    conductividad_termica = models.FloatField(default = 0)
+    transmitancia_termica = models.FloatField(default = 0)
     estado = models.CharField(max_length = 10) #sólido líquido o gaseoso
 
 class Constructor(User):

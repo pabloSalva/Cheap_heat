@@ -1,8 +1,10 @@
 from django.urls import path
-from . import views
+from .views import index, MaterialDetailView
 
 urlpatterns = [
 
-    path('', views.index),
+    path('', index),
+    path('edit/<int:pk>',MaterialDetailView.as_view()),
+    path('delete/<int:pk>',MaterialDetailView.as_view()),
 
 ]

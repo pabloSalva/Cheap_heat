@@ -8,6 +8,7 @@ django = "*"
 djangorestframework = "*"
 pylint = "*"
 vue = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 pylint = "*"
