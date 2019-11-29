@@ -13,14 +13,27 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   })
 
 
-  var formulario = document.getElementById('formulario1');
+  var formulario = document.getElementById('formulario1');  
+  //console.log(formulario[0].value());
+  
 
   formulario.addEventListener('submit',function (e) {
     e.preventDefault();
 
     var datos = new FormData(formulario);
 
-    console.log(datos.get('nombre_material'));
+    // console.log(datos.get('nombre_material'));
+    
+    // datos.append("nombre_material":{})
+
+  //   var datos = {
+  //                username : "pablin",
+  //                nombre_material : "ladrillo hueco",
+  //                tipo : "Ladrillo",
+  //                espesor : "0.18",
+  //                transmitancia_termica : "0.48",
+  //                estado : "Soldido",
+  // }
     
     var url = 'http://localhost:8000/api/materiales/'
 
@@ -28,12 +41,14 @@ $('#exampleModal').on('show.bs.modal', function (event) {
       method:'POST',
       body:JSON.stringify(datos),
       headers:{
-        'Content-Type' : 'appliction/json'
+        'Content-Type' : 'application/json'
       }
     })
     .then(res => res.json())
     .catch(error => console.error('Error: ',error))
     .then(response => console.log('Success: ', response));
+    console.log("datos: ",datos);
+    
   });
 
 
