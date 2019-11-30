@@ -113,3 +113,10 @@ pero sale más económico a la hora de comprarlo. No obstante, si bien los apara
 
 Pagina para poder configurar el middleware
  https://www.techiediaries.com/django-cors/
+
+
+
+
+ git init 
+ git clone 
+ 
